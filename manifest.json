@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "DarkMoodzzz",
+  "description": "put sites into the dark mood",
+  "version": "1",
+  "author": "mohamed youssef",
+  "permissions": ["activeTab", "declarativeContent", "storage", "<all_urls>"],
+ "background": {
+  "scripts": ["background.js"],
+  "persistent": false
+},
+ "browser_action": {
+   "default_icon": {
+     "16": "icon-ios7-moon-512.png",
+     "32": "icon-ios7-moon-512.png"
+   },
+   "default_popup": "popup.html"
+ }
+}
