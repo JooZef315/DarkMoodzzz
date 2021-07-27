@@ -1,4 +1,4 @@
-var elements = ["video","picture","img", "body", "div","textarea" ,"span" ,"td" , "aside", "ul", "ol", "table" ,"input" ,"nav" ,"main", "header", "footer" , "section" , "a", "li", "form", "article", "select", "hr"]
+var elements = ["video","picture","img", "body", "div","textarea" ,"span" ,"td" , "aside", "ul", "ol", "table" ,"input" ,"nav" ,"main", "header", "footer" , "section" , "a", "li","em" ,"form", "article", "select", "hr"]
 
 bg_dark = '#232628;'
 bg_code = '#000000;'
