@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function(e) {
+document.addEventListener("DOMContentLoaded", function(e) {  
   var dark = document.querySelector('#dark');
-  var light = document.querySelector("#light");
+  var light = document.querySelector("#light");  
 
   dark.addEventListener("click", () => {
     console.log("dark");

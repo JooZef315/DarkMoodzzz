@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <title>DarkMoodzz</title>
   <style>
-    button{
-      margin: 4px;
+    button{     
+      width: 90%; 
+      margin: 4px auto;
       border-radius: 12px;
+      border: none;
+      text-align: center;
+      font-size: large;
     }
     #light{
-      background-color: #FFFAF0;
+      background-color: #fff;
       color: #232628;
+      box-shadow: 0 0 0 1px black;
     }
     #dark{
       background-color: #232628;
       color: #FFFAF0;
+      box-shadow: 0 0 0 1px white;
     }
   </style>
 </head>
 <body>
-  <h4>DarkMoodzz</h4>
+  <h2>DarkMoodzz</h2>
   <button type="button" id="dark" name="dark">dark</button>
   <button type="button" id="light" name="light">Normal</button>
-  <script src="pop.js"></script>
+  <script type="module" src="pop.js"></script>
 </body>
 </html>

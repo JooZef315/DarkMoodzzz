@@ -1,41 +1,32 @@
-document.querySelector('body').style.color = "#FFFAF0";
-document.querySelector('body').style.backgroundColor = "#232628";
+var elements = ["video","picture","img", "body", "div","textarea" ,"span" ,"td" , "aside", "ul", "ol", "table" ,"input" ,"nav" ,"main", "header", "footer" , "section" , "a", "li", "form", "article", "select", "hr"]
 
-var td = document.getElementsByTagName("td");
-for (var i = 0; i < td.length; i++) {td[i].setAttribute("style", "color: #808080;");}
+bg_dark = '#232628;'
+bg_code = '#000000;'
+dark = '#FFFAF0;'
 
-var a = document.getElementsByTagName("a");
-for (var i = 0; i < a.length; i++) {a[i].setAttribute("style", "background-color: #232628; color: #005ca9;");}
+var ChangeStyle = (ele, bgColor, color) => { 
+  var style = ele.getAttribute('style')
+  if (style == null) {
+    ele.setAttribute("style","background-color: " + bgColor + "color: " + color);  
+  } else {
+    ele.setAttribute("style",style + " background-color: " + bgColor + "color: " + color);    
+  } 
+};
 
-var main = document.getElementsByTagName("main");
-for (var i = 0; i < main.length; i++) {main[i].setAttribute("style","background-color: #232628; color: #FFFAF0;");}
+elements.forEach(element => {  
+    [...document.getElementsByTagName(element)].forEach(e => {
+      if (element == "img" || element == "picture" || element == "video") {
+        e.style.zIndex = "1";
+      } 
+      if (element == "code" || element == "pre") {
+        ChangeStyle(e, bg_code, dark);     
+      } 
+      else if(element == "textarea" || element == "input" ){
+        ChangeStyle(e, dark, bg_dark);      
+      }    
+      else {
+        ChangeStyle(e, bg_dark, dark);  
+      }
+    });
+});
 
-var nav = document.getElementsByTagName("nav");
-for (var i = 0; i < nav.length; i++) {nav[i].setAttribute("style","background-color: #232628; color: #FFFAF0;");}
-
-var pre = document.getElementsByTagName("pre");
-for (var i = 0; i < pre.length; i++) {pre[i].setAttribute("style","background-color: #000000");}
-
-var code = document.getElementsByTagName("code");
-for (var i = 0; i < code.length; i++) {code[i].setAttribute("style","background-color: #000000; color: #FFFAF0;");}
-
-var div = document.getElementsByTagName("div");
-for (var i = 0; i < div.length; i++) {
-  div[i].style.color = "#FFFAF0";
-  div[i].style.backgroundColor = "#232628";
-}
-
-var textarea = document.getElementsByTagName("textarea");
-for (var i = 0; i < textarea.length; i++) {textarea[i].setAttribute("style","background-color: #FFFAF0; color: #232628;");}
-
-var input = document.getElementsByTagName("input");
-for (var i = 0; i < input.length; i++) {input[i].setAttribute("style","background-color: #FFFAF0; color: #232628;");}
-
-var span = document.getElementsByTagName("span");
-for (var i = 0; i < span.length; i++) {span[i].setAttribute("style","background-color: #232628; color: #FFFAF0;");}
-
-var aside = document.getElementsByTagName("aside");
-for (var i = 0; i < aside.length; i++) {aside[i].setAttribute("style","background-color: #232628; color: #FFFAF0;");}
-
-var li = document.getElementsByTagName("li");
-for (var i = 0; i < li.length; i++) {li[i].setAttribute("style","background-color: #232628; color: #FFFAF0;");}
